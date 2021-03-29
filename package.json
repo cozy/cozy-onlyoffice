@@ -46,7 +46,7 @@
   "dependencies": {
     "@material-ui/core": "4",
     "cozy-bar": "7.12.3",
-    "cozy-client": "15.3.0",
+    "cozy-client": "21.1.1",
     "cozy-scripts": "5.4.4",
     "cozy-ui": "48.0.0",
     "react": "16.13.1",
