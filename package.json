@@ -34,8 +34,6 @@
   "devDependencies": {
     "babel-preset-cozy-app": "1.2.5",
     "cozy-scripts": "^5",
-    "enzyme": "3.8.0",
-    "enzyme-adapter-react-16": "1.9.1",
     "git-directory-deploy": "1.5.1",
     "prettier": "1.15.3",
     "react-hot-loader": "4.6.5",
