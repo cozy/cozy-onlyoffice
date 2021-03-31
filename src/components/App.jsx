@@ -21,6 +21,7 @@ const App = () => {
     <HashRouter>
       <Layout>
         <Main>
+          <style>#coz-bar {'{ display: none }'}</style>
           <Content className={styles.appContent} />
         </Main>
         <IconSprite />
