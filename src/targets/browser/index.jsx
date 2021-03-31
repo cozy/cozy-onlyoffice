@@ -2,8 +2,6 @@
 import 'cozy-ui/transpiled/react/stylesheet.css'
 import 'cozy-ui/dist/cozy-ui.utils.min.css'
 
-import 'styles'
-
 import React from 'react'
 import CozyClient, { CozyProvider } from 'cozy-client'
 import { render } from 'react-dom'
