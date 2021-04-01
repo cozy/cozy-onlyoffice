@@ -6,10 +6,18 @@ import { Route, Switch, HashRouter } from 'react-router-dom'
 import { Layout, Main, Content } from 'cozy-ui/react/Layout'
 import { Sprite as IconSprite } from 'cozy-ui/react/Icon'
 
-import Editor from './Editor'
+import Editor from 'components/Editor'
 
 const useStyles = makeStyles(() => ({
-  appContent: {
+  layout: {
+    '&::before': {
+      display: 'none'
+    },
+    '&::after': {
+      display: 'none'
+    }
+  },
+  content: {
     height: '100%',
     alignItems: 'center',
     justifyContent: 'center'
@@ -21,10 +29,10 @@ const App = () => {
 
   return (
     <HashRouter>
-      <Layout>
+      <Layout className={styles.layout}>
         <Main>
           <style>#coz-bar {'{ display: none }'}</style>
-          <Content className={styles.appContent}>
+          <Content className={styles.content}>
             <Switch>
               <Route path="/:id" component={Editor} />
             </Switch>

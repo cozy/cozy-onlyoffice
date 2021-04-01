@@ -1,10 +1,12 @@
 import React, { useEffect, useCallback } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 
+import { headerHeight } from 'components/Header'
+
 const useStyles = makeStyles(() => ({
   container: {
     width: '100%',
-    height: '100%'
+    height: `calc(100vh - ${headerHeight})`
   }
 }))
 

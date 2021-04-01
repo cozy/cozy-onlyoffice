@@ -3,6 +3,7 @@ import React from 'react'
 import { useClient } from 'cozy-client'
 
 import useDoc from 'hooks/useDoc'
+import Header from 'components/Header'
 import View from './View'
 import Error from './Error'
 import Loading from './Loading'
@@ -25,7 +26,12 @@ export const Editor = props => {
     documentType: onlyOffice.documentType
   }
 
-  return <View apiUrl={apiUrl} config={config} />
+  return (
+    <>
+      <Header title={onlyOffice.document.title} />
+      <View apiUrl={apiUrl} config={config} />
+    </>
+  )
 }
 
 export default Editor
