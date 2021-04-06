@@ -1,16 +1,18 @@
 {
   "name": "OnlyOffice",
+  "name_prefix": "Cozy",
   "slug": "onlyoffice",
   "icon": "icon.svg",
-  "categories": [],
+  "categories": ["cozy"],
   "version": "0.1.0",
   "licence": "AGPL-3.0",
-  "editor": "",
+  "editor": "Cozy",
   "source": "https://github.com/cozy/cozy-onlyoffice.git@build",
   "developer": {
-    "name": "cozy",
-    "url": ""
+    "name": "Cozy Cloud",
+    "url": "https://cozy.io"
   },
+  "langs": ["en", "fr"],
   "routes": {
     "/": {
       "folder": "/",
@@ -29,9 +31,9 @@
       "type": "io.cozy.settings",
       "verbs": ["GET"]
     },
-    "mocks todos": {
-      "description": "TO REMOVE: only used as demonstration about Cozy App data interactions",
-      "type": "io.mocks.todos"
+    "files": {
+      "description": "OnlyOffice document as files",
+      "type": "io.cozy.files"
     }
   }
 }

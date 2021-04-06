@@ -2,10 +2,8 @@
   "name": "onlyoffice",
   "version": "0.1.0",
   "scripts": {
-    "tx": "tx pull --all || true",
-    "lint": "yarn lint:js && yarn lint:styles",
+    "lint": "yarn lint:js",
     "lint:js": "cs lint '{src,test}/**/*.{js,jsx}'",
-    "lint:styles": "stylint src/styles --config ./.stylintrc",
     "prebuild": "yarn lint",
     "build": "yarn build:browser",
     "build:browser": "cs build --browser",
@@ -34,8 +32,6 @@
   "devDependencies": {
     "babel-preset-cozy-app": "1.2.5",
     "cozy-scripts": "^5",
-    "enzyme": "3.8.0",
-    "enzyme-adapter-react-16": "1.9.1",
     "git-directory-deploy": "1.5.1",
     "prettier": "1.15.3",
     "react-hot-loader": "4.6.5",
@@ -44,12 +40,16 @@
     "stylint": "1.5.9"
   },
   "dependencies": {
-    "cozy-bar": "7.12.3",
-    "cozy-client": "15.3.0",
-    "cozy-ui": "37.8.0",
+    "@material-ui/core": "4",
+    "@testing-library/react": "11.2.6",
+    "@testing-library/react-hooks": "5.1.1",
+    "cozy-bar": "7.16.0",
+    "cozy-client": "21.1.1",
+    "cozy-logger": "1.7.0",
+    "cozy-scripts": "5.4.4",
+    "cozy-ui": "48.0.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-router-dom": "4.3.1",
-    "cozy-scripts": "5.4.4"
+    "react-router-dom": "4.3.1"
   }
 }

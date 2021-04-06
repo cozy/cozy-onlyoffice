@@ -2,13 +2,14 @@
 import 'cozy-ui/transpiled/react/stylesheet.css'
 import 'cozy-ui/dist/cozy-ui.utils.min.css'
 
-import 'styles'
-
 import React from 'react'
-import CozyClient, { CozyProvider } from 'cozy-client'
 import { render } from 'react-dom'
+
+import CozyClient, { CozyProvider } from 'cozy-client'
 import { I18n } from 'cozy-ui/react/I18n'
 import { BreakpointsProvider } from 'cozy-ui/react/hooks/useBreakpoints'
+import MuiCozyTheme from 'cozy-ui/transpiled/react/MuiCozyTheme'
+
 import schema from 'doctypes'
 
 let appLocale
@@ -21,7 +22,9 @@ const renderApp = function(client) {
     >
       <CozyProvider client={client}>
         <BreakpointsProvider>
-          <App />
+          <MuiCozyTheme>
+            <App />
+          </MuiCozyTheme>
         </BreakpointsProvider>
       </CozyProvider>
     </I18n>,
