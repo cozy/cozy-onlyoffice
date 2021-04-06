@@ -1,0 +1,31 @@
+import React from 'react'
+
+import { useClient } from 'cozy-client'
+
+import useDoc from 'hooks/useDoc'
+import View from './View'
+import Error from './Error'
+import Loading from './Loading'
+
+export const Editor = props => {
+  const client = useClient()
+  const { loading, doc } = useDoc({ client, fileId: props.match.params.id })
+
+  if (loading) return <Loading />
+  if (!doc) return <Error />
+
+  const { data } = doc
+  const onlyOffice = data.attributes.onlyoffice
+  const serverUrl = onlyOffice.url
+  const apiUrl = `${serverUrl}/web-apps/apps/api/documents/api.js`
+
+  // complete config doc : https://api.onlyoffice.com/editors/advanced
+  const config = {
+    document: onlyOffice.document,
+    documentType: onlyOffice.documentType
+  }
+
+  return <View apiUrl={apiUrl} config={config} />
+}
+
+export default Editor

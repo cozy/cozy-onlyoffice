@@ -2,9 +2,11 @@ import React from 'react'
 import { hot } from 'react-hot-loader'
 import { makeStyles } from '@material-ui/core/styles'
 
-import { HashRouter } from 'react-router-dom'
+import { Route, Switch, HashRouter } from 'react-router-dom'
 import { Layout, Main, Content } from 'cozy-ui/react/Layout'
 import { Sprite as IconSprite } from 'cozy-ui/react/Icon'
+
+import Editor from './Editor'
 
 const useStyles = makeStyles(() => ({
   appContent: {
@@ -22,7 +24,11 @@ const App = () => {
       <Layout>
         <Main>
           <style>#coz-bar {'{ display: none }'}</style>
-          <Content className={styles.appContent} />
+          <Content className={styles.appContent}>
+            <Switch>
+              <Route path="/:id" component={Editor} />
+            </Switch>
+          </Content>
         </Main>
         <IconSprite />
       </Layout>

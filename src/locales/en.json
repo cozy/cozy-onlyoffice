@@ -3,5 +3,9 @@
     "todos": "Todos",
     "hello_nav_2": "Second",
     "hello_nav_3": "Third"
+  },
+  "Error": {
+    "title": "Something goes wrong",
+    "text": "Please try to reload the page"
   }
 }
