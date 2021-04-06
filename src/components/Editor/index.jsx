@@ -23,6 +23,8 @@ export const Editor = props => {
   // complete config doc : https://api.onlyoffice.com/editors/advanced
   const config = {
     document: onlyOffice.document,
+    editorConfig: onlyOffice.editor,
+    token: onlyOffice.token,
     documentType: onlyOffice.documentType
   }
 
